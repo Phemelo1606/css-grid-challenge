@@ -128,5 +128,21 @@ body {
       "kira"
       "jean"
       "pat";
+      gap: 24px;
+      padding: 24px;
+  }
+
+  .Dan, .Jon, .Jean, .Pat, .Kira {
+    padding: 32px 28px;
+  }
+
+  .heading {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .body {
+    font-size: 13px;
+    line-height: 1.5;
   }
 }
