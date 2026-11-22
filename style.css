@@ -146,3 +146,21 @@ body {
     line-height: 1.5;
   }
 }
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas:
+      "dan  dan  jon  kira"
+      "jean pat  pat  kira";
+    gap: 32px;
+    padding: 32px;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .container {
+    padding-block: 96px;
+  }
+}
