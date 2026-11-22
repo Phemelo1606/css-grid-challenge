@@ -30,6 +30,7 @@ body {
   border-radius: 4px;
   padding: 20px;
   color: var(--white);
+  grid-column: span 2;
 }
 
 .Jon {
@@ -47,6 +48,7 @@ body {
   border: 1px;
   border-radius: 4px;
   padding: 20px;
+  grid-column: 1
 
 }
 
@@ -69,14 +71,17 @@ body {
     border-radius: 4px;
     padding: 20px;
     color: var(--white);
+    grid-column: span 2;
 }
 
 .Kira{
+
     background-color: var(--white);
     margin: 10px;
     border: 1px;
     border-radius: 4px;
     padding: 20px;
+    grid-row: span 2; grid-column: 4;
 }
 
 .label {
@@ -89,5 +94,39 @@ body {
 
 
 .container{
-    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "dan  dan  jon  kira"
+        "jean pat  pat  kira";
+    gap: 30px;
+    max-width: 1114px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+.Dan   { grid-area: dan; }
+.Jon   { grid-area: jon; }
+.Kira  { grid-area: kira; }
+.Jean  { grid-area: jean; }
+.Pat   { grid-area: pat; }
+
+.Dan, .Jon, .Jean, .Pat, .Kira {
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "dan"
+      "jon"
+      "kira"
+      "jean"
+      "pat";
+  }
 }
